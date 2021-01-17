@@ -1,0 +1,25 @@
+<nav class="menu">
+  <ul>
+    <li>
+      <button (click)="toggleSidebar()"></button>
+    </li>
+    <li *ngFor="let im of menu | keyvalue">
+      <a routerLink="/{{im.key}}">{{im.value}}</a>
+    </li>
+
+    <li>
+      <form autocomplete="off">
+        <input list="components" name="browser" id="browser" placeholder="Enter Keyword" >
+        <datalist id="components" >
+          <option *ngFor="let im of menu | keyvalue" value="{{im.value}}">
+        </datalist>
+      </form>
+    </li>
+  </ul>
+
+
+
+</nav>
+
+
+

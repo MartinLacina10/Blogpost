@@ -1,0 +1,7 @@
+<nav class="menu" *ngIf="visible">
+  <ul>
+    <li *ngFor="let im of menu | keyvalue">
+      <a routerLink="/{{im.key}}">{{im.value}}</a>
+    </li>
+  </ul>
+</nav>
